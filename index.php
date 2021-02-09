@@ -1,3 +1,14 @@
+<?php
+  if(isset($_GET['lang']) && $_GET['lang'] == 'es') {
+    require "./assets/lang/es.php";
+  }//end if
+  else if(isset($_GET['lang']) && $_GET['lang'] == 'en') {
+    require "./assets/lang/en.php";
+  }//end else if
+  else {
+    require "./assets/lang/es.php";
+  }//end else
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,10 +58,11 @@
 
       <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portafolio</a></li>
+          <?php
+            for ($i=0; $i < sizeof($menu); $i++) { 
+              echo $menu[$i];
+            }//end for
+          ?>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -74,10 +86,9 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Acerca de</h2>
+          <h2><?php echo $about_title; ?></h2>
           <p>
-            Mi nombre es Juan Pablo Romero actualmente soy desarrollador Web Developer con 3 años de experiencia, me gusta aprender
-            nuevas cosas todos los días, colaborar en equipo, ser empático, creativo, lider, proactivo.
+            <?php echo $about_text; ?>
           </p>
         </div>
 
@@ -88,21 +99,25 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Web Developer.</h3>
             <p class="font-italic">
-              Mientras haya vida, hay esperanza <br>- Stephen Hawking.
+              <?php echo $phrase; ?> <br>- Stephen Hawking.
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Fecha de nacimiento:</strong> 14/04/1997</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Ciudad:</strong> Tlaxcala, Tlaxcala - México</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Edad:</strong> <span id="edad"></span></li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Carrera:</strong> Ing. en Tecnologías de la Información</li>
+                  <?php
+                    foreach ($info_uno as $clave => $valor) {
+                      echo '<li><i class="icofont-rounded-right"></i> <strong>'.$valor['text'].'</strong> '.$valor['value'].'</li>';
+                    }//end foreach
+                  ?>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> juanpabloromero04@gmail.com</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Disponible</li>
+                  <?php
+                    foreach ($info_dos as $clave2 => $valor2) {
+                      echo '<li><i class="icofont-rounded-right"></i> <strong>'.$valor2['text'].'</strong> '.$valor2['value'].'</li>';
+                    }//end foreach
+                  ?>
                 </ul>
               </div>
             </div>
@@ -120,8 +135,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Skills</h2>
-          <p>Mis principales habilidades como profesional.</p>
+          <h2><?php echo $skills_title; ?></h2>
+          <p><?php echo $skills_text; ?></p>
         </div>
 
         <div class="row skills-content">
@@ -255,17 +270,17 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="educacion" class="resume">
+    <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
-          <h2>Educación</h2>
+          <h2><?php echo $title_education; ?></h2>
         </div>
 
         <div class="row">
           <div class="col-lg-12" data-aos="fade-up">
             <div class="resume-item">
-              <h4>Ing. en Tecnologías de la Información</h4>
+              <h4><?php echo $carrer; ?></h4>
               <h5>2016 - 2019</h5>
               <p><em>Universidad Politécnica de Tlaxcala</em></p>
             </div>
@@ -277,146 +292,57 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section class="resume">
       <div class="container">
 
         <div class="section-title">
-          <h2>Experiencia Profesional</h2>
+          <h2><?php echo $experience_title; ?></h2>
         </div>
 
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="resume-item">
-              <h4>Sistema de Administración E&E</h4>
-              <h5>Septiembre - Diciembre 2020</h5>
-              <p><em>Universidad Politécnica de Tlaxcala</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos con el cliente</li>
-                <li>Análisis y diseño de báse de datos</li>
-                <li>Coordinación de equipo de trabajo</li>
-                <li>Desarrollo full-stack</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Plataforma de Examen de Admisión UPTx</h4>
-              <h5>Mayo - Abril 2020</h5>
-              <p><em>Universidad Politécnica de Tlaxcala</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y desarrollo de base de datos</li>
-                <li>Desarrollo full-stack</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Desarrollador Freelancer Full-stack</h4>
-              <h5>Febrero - Abril 2020</h5>
-              <p><em>Escienza</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y desarrollo de base de datos</li>
-                <li>Mantenimiento y desarrollo de módulos de sistemas</li>
-                <li>Desarrollo full-stack</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Alarma Vecinal</h4>
-              <h5>Septiembre - Diciembre 2020</h5>
-              <p><em>Confidencial</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y desarrollo de base de datos</li>
-                <li>Desarollo de plataforma para llegada de alertas, pases de listas y más.</li>
-                <li>Desarrollo full-stack</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
 
-            <div class="resume-item">
-              <h4>Sistema de Estudio de Trayectoria Educativa</h4>
-              <h5>Octubre - Diciembre 2019</h5>
-              <p><em>Universidad Politécnica de Tlaxcala</em></p>
-              <ul>
-                <li>Análisis y diseño de báse de datos</li>
-                <li>Coordinación de equipo de trabajo</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
+            <?php
+              foreach ($experiencia_uno as $index => $val) {
+                echo '
+                  <div class="resume-item">
+                    <h4>'.$val['title'].'</h4>
+                    <h5>'.$val['time'].'</h5>
+                    <p><em>'.$val['company'].'</em></p>
+                    <ul>';
+                      foreach ($val['tasks'] as $tarea) {
+                        echo '<li>'.$tarea.'</li>';
+                      }//end foreach
+                echo '</ul>
+                    <p>'.$val['technologies'].'</p>
+                  </div>
+                ';
+              }
+            ?>
 
           </div>
           
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="resume-item">
-              <h4>Observatorio Turístico de Tlaxcala</h4>
-              <h5>Mayo - Diciembre 2019</h5>
-              <p><em>SECTURE Tlaxcala</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos con el cliente</li>
-                <li>Integración de módulos a panel administrativo</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
+            <?php
+              foreach ($experiencia_dos as $index2 => $val2) {
+                echo '
+                  <div class="resume-item">
+                    <h4>'.$val2['title'].'</h4>
+                    <h5>'.$val2['time'].'</h5>
+                    <p><em>'.$val2['company'].'</em></p>
+                    <ul>';
+                      foreach ($val2['tasks'] as $tarea2) {
+                        echo '<li>'.$tarea2.'</li>';
+                      }//end foreach
+                echo '</ul>
+                    <p>'.$val2['technologies'].'</p>
+                  </div>
+                ';
+              }
+            ?>
 
-            <div class="resume-item">
-              <h4>Visita Tlaxcala Portal Web</h4>
-              <h5>Mayo - Diciembre 2019</h5>
-              <p><em>SECTURE Tlaxcala</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y diseño de base de datos</li>
-                <li>Creación de panel administrativo para alimentar el portal web</li>
-                <li>Actualización de portal web</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Sistema de Test Psicométrico</h4>
-              <h5>Julio - Agosto 2019</h5>
-              <p><em>Universidad Politécnica de Tlaxcala</em></p>
-              <ul>
-                <li>Actualización de sistema antiguo implementando tecnologías nuevas</li>
-                <li>Análisis y diseño de base de datos</li>
-                <li>Creación de módulos de estadística</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Portal Web OSS</h4>
-              <h5>Enero - Junio 2018</h5>
-              <p><em>Universidad Politécnica de Tlaxcala</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y diseño de base de datos</li>
-                <li>Desarrollo de módulos para panel administrativo</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Sistema de Administración de Barbaros GYM</h4>
-              <h5>Enero - Abril 2017</h5>
-              <p><em>Barbaros GYM</em></p>
-              <ul>
-                <li>Levantamiento de requerimientos</li>
-                <li>Análisis y diseño de base de datos</li>
-                <li>Desarrollo de módulos de administración de clientes</li>
-                <li>Envió de correo electrónico a clientes</li>
-                <li>Desarrollo back-end</li>
-              </ul>
-              <p>Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap.</p>
-            </div>
-            
           </div>
         </div>
 
@@ -428,8 +354,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Evidencias de proyectos donde he colaborado y adquidiro experienca como desarrollador.</p>
+          <h2><?php echo $portafolio_title; ?></h2>
+          <p><?php echo $portafolio_text; ?></p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -468,7 +394,7 @@
               <img src="assets/img/portfolio/3.png" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/3.png" data-gall="portfolioGallery" class="venobox" title="IMAV2021"><i class="bx bx-plus"></i></a>
-                <a href="https://imav2021.inaoep.mx/index.php/portal/home" title="Más detalles" target="_blank"><i class="bx bx-link"></i></a>
+                <a href="https://imav2021.inaoep.mx/2.php/portal/home" title="Más detalles" target="_blank"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -512,6 +438,8 @@
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Juan Pablo</span></strong>
+        <br>
+        <strong><a href="./?lang=es">Es</a></strong> | <strong><a href="./?lang=en">En</a></strong>
       </div>
     </div>
   </footer><!-- End  Footer -->
