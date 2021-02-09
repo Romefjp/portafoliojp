@@ -1,0 +1,121 @@
+[
+    {        
+        "title": "Sistema de Administración E&E",
+        "time": "Septiembre - Diciembre 2020",
+        "company": "Universidad Politécnica de Tlaxcala",
+        "tasks": [
+            "Levantamiento de requerimientos con el cliente",
+            "Análisis y diseño de báse de datos",
+            "Coordinación de equipo de trabajo",
+            "Desarrollo full-stack"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Plataforma de Examen de Admisión UPTx",
+        "time": "Mayo - Abril 2020",
+        "company": "Universidad Politécnica de Tlaxcala",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y desarrollo de base de datos",
+            "Desarrollo full-stack"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Desarrollador Freelancer Full-stack",
+        "time": "Febrero - Abril 2020",
+        "company": "Escienza",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y desarrollo de base de datos",
+            "Mantenimiento y desarrollo de módulos de sistemas",
+            "Desarrollo full-stack"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Alarma Vecinal",
+        "time": "Septiembre - Diciembre 2020",
+        "company": "Confidencial",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y desarrollo de base de datos",
+            "Desarollo de plataforma para llegada de alertas, pases de listas y más",
+            "Desarrollo full-stack"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    }, 
+    {
+        "title": "Sistema de Estudio de Trayectoria Educativa",
+        "time": "Octubre - Diciembre 2019",
+        "company": "Universidad Politécnica de Tlaxcala",
+        "tasks": [
+            "Análisis y diseño de báse de datos",
+            "Coordinación de equipo de trabajo",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."    
+    },
+    {
+        "title": "Observatorio Turístico de Tlaxcala",
+        "time": "Mayo - Diciembre 2019",
+        "company": "SECTURE Tlaxcala",
+        "tasks": [
+            "Levantamiento de requerimientos con el cliente",
+            "Integración de módulos a panel administrativo",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Visita Tlaxcala Portal Web",
+        "time": "Mayo - Diciembre 2019",
+        "company": "SECTURE Tlaxcala",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y diseño de base de datos",
+            "Creación de panel administrativo para alimentar el portal web",
+            "Actualización de portal web",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Sistema de Test Psicométrico",
+        "time": "Julio - Agosto 2019",
+        "company": "Universidad Politécnica de Tlaxcala",
+        "tasks": [
+            "Actualización de sistema antiguo implementando tecnologías nuevas",
+            "Análisis y diseño de base de datos",
+            "Creación de módulos de estadística",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Portal Web OSS",
+        "time": "Enero - Junio 2018",
+        "company": "Universidad Politécnica de Tlaxcala",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y diseño de base de datos",
+            "Desarrollo de módulos para panel administrativo",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    },
+    {
+        "title": "Sistema de Administración de Barbaros GYM",
+        "time": "Enero - Abril 2017",
+        "company": "Barbaros GYM",
+        "tasks": [
+            "Levantamiento de requerimientos",
+            "Análisis y diseño de base de datos",
+            "Desarrollo de módulos de administración de clientes",
+            "Envió de correo electrónico a clientes",
+            "Desarrollo back-end"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5 y Bootstrap."
+    }
+]
