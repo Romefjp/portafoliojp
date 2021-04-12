@@ -1,5 +1,20 @@
 [
     {        
+        "title": "Lotus System - Freelancer",
+        "time": "Marzo 2020",
+        "company": "Grupo Lotus System",
+        "tasks": [
+            "Comunicación con el cliente",
+            "Levantamiento de requerimientos",
+            "Análisis y diseño de báse de datos",
+            "Desarrollo de sitio web y panel administrativo",
+            "Configuración de correos en sistema administrativo",
+            "Despliege de proyecto en hosting",
+            "Desarrollo full-stack"
+        ],
+        "technologies": "Tecnologías: MySQL, CodeIgniter 3 PHP (MVC), Ajax, JQuery, JavaScript, HTML5, Bootstrap y consumo de API divisas."
+    },
+    {        
         "title": "Sistema de Administración E&E",
         "time": "Septiembre - Diciembre 2020",
         "company": "Universidad Politécnica de Tlaxcala",
